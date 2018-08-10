@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Revisao1sem</string>
+    <string name="label_description">Description</string>
+    <string name="label_hp">HP</string>
+    <string name="label_speed">Speed</string>
+    <string name="label_attack">Attack</string>
+    <string name="label_defense">Defense</string>
 
 
 </resources>

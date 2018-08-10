@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DetalheActivity">
+
+    <TextView
+        style="@style/label_detalhe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="#150 Mewtwo" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mewtwo" />
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:text="@string/label_description"
+        style="@style/label_detalhe"/>
+
+    <View
+        style="@style/line"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="bla bla bla bla balba l abalbakblab la blab alb alb albl albbla balb alb alb "
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18dp"/>
+
+    <View
+        style="@style/line"/>
+
+    <TextView
+        android:text="Abilities"
+        style="@style/label_detalhe"/>
+
+    <View
+        style="@style/line"/>
+
+    <LinearLayout
+        style="@style/container_abilities">
+        <LinearLayout
+            style="@style/container_abilities_child">
+
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="100"/>
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_hp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/container_abilities_child">
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="60"/>
+
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_speed"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/line"/>
+    <LinearLayout
+        style="@style/container_abilities">
+        <LinearLayout
+            style="@style/container_abilities_child">
+
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="840"/>
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_attack"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/container_abilities_child">
+            <TextView
+                style="@style/abilities_field_title"
+                tools:text="500"/>
+
+            <TextView
+                style="@style/abilities_field_subtitle"
+                android:text="@string/label_defense"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        style="@style/line"/>
+
+</LinearLayout>
