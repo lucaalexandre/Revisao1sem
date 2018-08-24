@@ -1,6 +1,9 @@
 package br.com.fiap.revisao1sem.api
 
+import android.content.Context
 import android.util.Log
+import com.squareup.picasso.OkHttp3Downloader
+import com.squareup.picasso.Picasso
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -27,6 +30,28 @@ class ClientApi<T> {
     }
 
 }
+
+private var picasso: Picasso? = null
+
+fun getPicassoAuth(context: Context): Picasso {
+    if(picasso == null) {
+        picasso = Picasso
+                .Builder(context)
+                .downloader(OkHttp3Downloader(getOkhttpClientAuth().build()))
+                .build()
+    }
+    return picasso!!
+
+}
+
+fun getOkhttpClientAuth(): OkHttpClient.Builder {
+    return  OkHttpClient.Builder()
+            .addInterceptor(AuthInterceptor())
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
+}
+
 
 class AuthInterceptor : Interceptor {
 

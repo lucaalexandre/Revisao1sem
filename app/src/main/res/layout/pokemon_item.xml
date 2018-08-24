@@ -29,16 +29,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvTipoPokemon"
+                android:id="@+id/tvNumeroPokemon"
                 android:textColor="#ccc"
                 android:textSize="10sp"
                 android:text="Genetic"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvDescricaoPokemon"
-                android:maxLines="3"/>
 
         </LinearLayout>
 

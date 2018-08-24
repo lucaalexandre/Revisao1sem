@@ -2,9 +2,7 @@ package br.com.fiap.revisao1sem
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.view.InputQueue
 import android.widget.Toast
 import br.com.fiap.revisao1sem.api.getPokemonApi
 import br.com.fiap.revisao1sem.model.Pokemon
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 pokemons,
                 this, {
             Toast.makeText(this,
-                    it.nome, Toast.LENGTH_LONG).show()
+                    it.name, Toast.LENGTH_LONG).show()
         })
         val layoutManager = LinearLayoutManager(this)
         rvPokemons.layoutManager = layoutManager
